@@ -1,4 +1,154 @@
-nav.My-food-logo {
-  background-color: red;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .Myfood-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px none #a5a3a3;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 0px 10px #cacaca;
+          box-shadow: 0px 0px 0px 10px #cacaca;
+  margin-top: -9px;
+  margin-bottom: 2px;
+}
+
+nav .Myfood-logo .logo {
+  margin-left: 50px;
+  padding-left: 30px;
+  width: 194px;
+  height: 51px;
+}
+
+.location-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #ebe9e9;
+  margin-left: 50px;
+  padding-left: 120px;
+}
+
+.location-icon p {
+  font-family: Roboto;
+  font-size: larger;
+  padding-left: 20px;
+}
+
+.explore-contaier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #faf5f5;
+  width: 110%;
+  margin-left: -16;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.explore-contaier h2 {
+  margin-left: -7px;
+  padding-left: 2px;
+  font-size: 22px;
+}
+
+.navcopy {
+  font-weight: lighter;
+}
+
+.button-container {
+  height: 65px;
+}
+
+.button-container .explore-button {
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: none;
+  font-family: Roboto;
+  font-size: 16px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+}
+
+.booking-steps-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking-steps-container .booking-steps-title {
+  font-family: Roboto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.mini-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
+          box-shadow: 0 4px 8px 0 #cacaca;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  border: 1px none #cacaca;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  background-color: #f8f8f8;
+  padding: 0 20px;
+  height: 70px;
+  width: 270px;
+}
+
+.mini-cards .number {
+  padding: 3px 7px;
+  border: 1px solid #9356dc;
+  border-radius: 20px;
+  background-color: #9356dc;
+  color: #fff;
+  margin-left: -30px;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */

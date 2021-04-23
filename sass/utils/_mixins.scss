@@ -1,0 +1,64 @@
+  @mixin nav-background ($backgroundcolor){
+    background-color: $backgroundcolor;
+  }
+
+  @mixin logo-size {
+     width: 194px;
+     height: 51px;
+  }  
+
+  @mixin div-border {
+   padding: 10px;
+   border-bottom: 1px none #a5a3a3;
+   width: 100%;
+   box-shadow: 0px 0px 0px 10px $color-shadow;
+  }
+
+  @mixin navmargin ($padding-left, $marginhead-left) {
+   margin-left: $marginhead-left;
+   padding-left: $padding-left;
+  }
+
+  @mixin flexrow {
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+  }
+
+  @mixin flexcolumn {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  @mixin font-location {
+    font-family: $font-text; 
+    font-size: larger;
+  }
+
+  @mixin exp-buttonshape {
+    padding: 15px 20px;
+    border-radius: 20px;
+    border:none;
+  }
+
+  @mixin exp-buttoncolor {
+    font-family: $font-text;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to bottom, #ff79da, #9356dc);
+  }
+
+  @mixin container-titles {
+    font-family: $font-text;
+    align-self: flex-start;
+  }
+  @mixin cards {
+    box-shadow: 0 4px 8px 0 #cacaca;
+    transition: 0.9s;
+    border: 1px none #cacaca;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-family: $font-text;
+    background-color:#f8f8f8
+  }

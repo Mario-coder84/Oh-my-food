@@ -1,5 +1,85 @@
-  
-  nav.My-food-logo {
-      background-color: red;
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
 
+nav {
+  @include flexcolumn;
+
+    & .Myfood-logo {
+      display:flex;
+      @include nav-background ($backgroundcolor);
+      @include div-border;
+      margin-top: -9px;
+      margin-bottom:2px;
+
+      & .logo{
+        @include navmargin(30px, 50px);
+        @include logo-size;
+      }
+    }
+ }
+
+ .location-icon {
+  @include flexrow;
+  width: 100%;
+  @include nav-background(#ebe9e9);
+  @include navmargin(120px, 50px);
+
+      p {
+         @include font-location;
+         padding-left:20px;     
+   }
+}
+
+.explore-contaier {
+  @include flexcolumn;
+  @include nav-background(#faf5f5);
+  width: 110%;
+  margin-left: -16;
+  font-family: $font-text;
+  text-align: center;
+
+    & h2 {
+        @include navmargin(2px, -7px); 
+        font-size: 22px;
+
+    }
   }
+           .navcopy{
+              font-weight: lighter; 
+  }
+    
+   .button-container {
+    height: 65px;
+
+        & .explore-button {
+           @include exp-buttonshape;
+           @include exp-buttoncolor;
+   }
+  }
+  .booking-steps-container {
+    @include flexcolumn; 
+
+        & .booking-steps-title {
+          @include container-titles;
+    }
+  }
+  .mini-cards {
+    @include flexrow;
+    @include cards;
+    padding: 0 20px;
+    height: 70px;
+    width: 270px;
+           
+              & .number {
+                padding: 3px 7px;
+                border: 1px solid $color-primary;
+                border-radius: 20px;
+                background-color: $color-primary;
+                color: #fff;
+                margin-left: -30px;
+                margin-right: 20px;
+
+              }
+  }
+
