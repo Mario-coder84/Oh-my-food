@@ -7,79 +7,151 @@ nav {
 
     & .Myfood-logo {
       display:flex;
-      @include nav-background ($backgroundcolor);
+      @include lightgray-background ($whitecolor);
       @include div-border;
       margin-top: -9px;
       margin-bottom:2px;
 
       & .logo{
-        @include navmargin(30px, 50px);
-        @include logo-size;
+        @include container-margin(30px, 50px);
+        @include logo-size (194px, 51px);
       }
     }
- }
-
+}
  .location-icon {
   @include flexrow;
   width: 100%;
-  @include nav-background(#ebe9e9);
-  @include navmargin(120px, 50px);
+  @include lightgray-background(#ebe9e9);
+  @include container-margin(120px, 50px);
 
       p {
          @include font-location;
          padding-left:20px;     
    }
 }
-
 .explore-contaier {
   @include flexcolumn;
-  @include nav-background(#faf5f5);
+  @include lightgray-background(#faf5f5);
   width: 110%;
   margin-left: -16;
   font-family: $font-text;
   text-align: center;
 
     & h2 {
-        @include navmargin(2px, -7px); 
+        @include container-margin (2px, -7px); 
         font-size: 22px;
 
     }
   }
            .navcopy{
               font-weight: lighter; 
-  }
-    
-   .button-container {
+}  
+  .button-container {
     height: 65px;
 
         & .explore-button {
            @include exp-buttonshape;
            @include exp-buttoncolor;
    }
-  }
+}
   .booking-steps-container {
     @include flexcolumn; 
 
         & .booking-steps-title {
           @include container-titles;
     }
-  }
+}
   .mini-cards {
     @include flexrow;
-    @include cards;
+    @include cards (20px);
     padding: 0 20px;
     height: 70px;
     width: 270px;
            
               & .number {
-                padding: 3px 7px;
-                border: 1px solid $color-primary;
-                border-radius: 20px;
-                background-color: $color-primary;
-                color: #fff;
-                margin-left: -30px;
-                margin-right: 20px;
-
+                @include purplenumbers
               }
-  }
+                  & .icon {
+                    margin-right: 10px;
+                    color:#a5a3a3;
+                     & :hover {
+                       color: #9356dc;
+                     }
+              }
+}
+  .wrapper-restaurants {
+    @include flexcolumn; 
+    @include lightgray-background(#faf5f5);
+    @include container-margin (23px, -18px); 
+    width: 100%;
+    height: 1125px;
+    
 
+         & .wrapper-restaurants-title{
+          @include container-titles;
+         }
+}
+  .cards {
+    @include flexcolumn;
+}
+          .restaurant-card {
+            @include cards (-12px);
+            overflow: hidden;
+          
+               & .card-img {
+                  @include cardimg
+                 
+               }
+}  
+  .wrapper-restaurant-info {
+      @include flexcolumn;
+      @include cards (20px);
+      width: 304px; 
+      height:80px;
+      border-top-right-radius: 0px;  
+      border-top-left-radius: 0px; 
+            
+             & .card-bold-info {
+              width: 94%;
+              height: 34px;
+             }
+}         
+  .card-city-info {
+    width: 93%;
+    height: 20px;
+}
+       .heart {
+          align-self: flex-end;
+          font-size: 25px;
+          margin-right: 24px;
+          margin-top: -21px;
+          padding-bottom: 12px;
+}
+  footer{
+    @include lightgray-background (#424141f4) ;
+    @include container-margin (23px, -18px);
+    color: $whitecolor; 
+    font-family: $font-text;
+    height: 250px;
+       
+         & .mini-logo{
+          filter: invert(100%);
+          padding: 20px;
+           
+               & .mini-log {
+                 width: 130px;
+               }
+
+         }
+  }  
+  .footer-list {
+    @include footlist;
+         
+         li {
+            padding-bottom: 10px;
+         }
+          & .iconlist {
+            padding-right: 10px;
+            
+          }
+  }

@@ -1,10 +1,10 @@
-  @mixin nav-background ($backgroundcolor){
-    background-color: $backgroundcolor;
+  @mixin lightgray-background ($whitecolor){
+    background-color: $whitecolor;
   }
 
-  @mixin logo-size {
-     width: 194px;
-     height: 51px;
+  @mixin logo-size  ($width-logo, $height-logo){
+     width: $width-logo;
+     height: $height-logo;
   }  
 
   @mixin div-border {
@@ -14,7 +14,7 @@
    box-shadow: 0px 0px 0px 10px $color-shadow;
   }
 
-  @mixin navmargin ($padding-left, $marginhead-left) {
+  @mixin container-margin ($padding-left, $marginhead-left) {
    margin-left: $marginhead-left;
    padding-left: $padding-left;
   }
@@ -53,12 +53,35 @@
     font-family: $font-text;
     align-self: flex-start;
   }
-  @mixin cards {
+  @mixin cards ($margin-bottom) {
     box-shadow: 0 4px 8px 0 #cacaca;
     transition: 0.9s;
     border: 1px none #cacaca;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: $margin-bottom;
     font-family: $font-text;
     background-color:#f8f8f8
+  }
+  @mixin purplenumbers {
+    padding: 3px 7px;
+    border: 1px solid $color-primary;
+    border-radius: 20px;
+    background-color: $color-primary;
+    color: #fff;
+    margin-left: -30px;
+    margin-right: 20px;
+  }
+  @mixin cardimg {
+    height: 160px;
+    width: 300px;
+    padding:2px;
+    border-radius: 15px;
+  }
+  @mixin footlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    list-style-type: none !important;
+    margin-left: -20px;
+    padding-bottom: 10px;
   }
