@@ -55,7 +55,7 @@ nav .Myfood-logo .logo {
   padding-left: 20px;
 }
 
-.explore-contaier {
+.explore-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +73,7 @@ nav .Myfood-logo .logo {
   text-align: center;
 }
 
-.explore-contaier h2 {
+.explore-container h2 {
   margin-left: -7px;
   padding-left: 2px;
   font-size: 22px;
@@ -87,7 +87,7 @@ nav .Myfood-logo .logo {
   height: 65px;
 }
 
-.button-container .explore-button {
+.explore-button {
   padding: 15px 20px;
   border-radius: 20px;
   border: none;
@@ -96,6 +96,28 @@ nav .Myfood-logo .logo {
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(to bottom, #ff79da, #9356dc);
+  position: relative;
+  z-index: 1;
+}
+
+.explore-button:hover::after {
+  opacity: 1;
+}
+
+.explore-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  border-radius: 20px;
 }
 
 .booking-steps-container {
@@ -128,21 +150,31 @@ nav .Myfood-logo .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
-          box-shadow: 0 4px 8px 0 #cacaca;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
   border: 1px none #cacaca;
   border-radius: 15px;
   margin-bottom: 20px;
   font-family: Roboto;
   background-color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
+          box-shadow: 0 4px 8px 0 #cacaca;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
   padding: 0 20px;
   height: 70px;
   width: 270px;
+  -webkit-transition: background-color 300ms 150ms;
+  transition: background-color 300ms 150ms;
+  -webkit-box-shadow: 300ms;
+          box-shadow: 300ms;
 }
 
-.mini-cards .number {
+.mini-cards:hover {
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 0 4px 8px 0 #5e5e5e;
+          box-shadow: 0 4px 8px 0 #5e5e5e;
+}
+
+.number {
   padding: 3px 7px;
   border: 1px solid #9356dc;
   border-radius: 20px;
@@ -152,12 +184,12 @@ nav .Myfood-logo .logo {
   margin-right: 20px;
 }
 
-.mini-cards .icon {
+.icon {
   margin-right: 10px;
   color: #a5a3a3;
 }
 
-.mini-cards .icon :hover {
+.icon :hover {
   color: #9356dc;
 }
 
@@ -199,15 +231,15 @@ nav .Myfood-logo .logo {
 }
 
 .restaurant-card {
-  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
-          box-shadow: 0 4px 8px 0 #cacaca;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
   border: 1px none #cacaca;
   border-radius: 15px;
   margin-bottom: -12px;
   font-family: Roboto;
   background-color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
+          box-shadow: 0 4px 8px 0 #cacaca;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
   overflow: hidden;
 }
 
@@ -229,15 +261,15 @@ nav .Myfood-logo .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
-          box-shadow: 0 4px 8px 0 #cacaca;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
   border: 1px none #cacaca;
   border-radius: 15px;
   margin-bottom: 20px;
   font-family: Roboto;
   background-color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 8px 0 #cacaca;
+          box-shadow: 0 4px 8px 0 #cacaca;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
   width: 304px;
   height: 80px;
   border-top-right-radius: 0px;
@@ -261,6 +293,17 @@ nav .Myfood-logo .logo {
   margin-right: 24px;
   margin-top: -21px;
   padding-bottom: 12px;
+}
+
+.black-hearth {
+  margin-left: -25px;
+  color: #fff;
+  -webkit-transition: background-color 300ms 150ms;
+  transition: background-color 300ms 150ms;
+}
+
+.black-hearth:active {
+  color: #9356dc;
 }
 
 footer {

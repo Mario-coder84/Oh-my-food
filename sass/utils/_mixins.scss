@@ -48,19 +48,20 @@
     color: white;
     background: linear-gradient(to bottom, #ff79da, #9356dc);
   }
-
   @mixin container-titles {
     font-family: $font-text;
     align-self: flex-start;
   }
   @mixin cards ($margin-bottom) {
-    box-shadow: 0 4px 8px 0 #cacaca;
-    transition: 0.9s;
+    
     border: 1px none #cacaca;
     border-radius: 15px;
     margin-bottom: $margin-bottom;
     font-family: $font-text;
-    background-color:#f8f8f8
+    background-color:#f8f8f8;
+    box-shadow: 0 4px 8px 0 #cacaca;
+    transition: 0.9s; 
+   
   }
   @mixin purplenumbers {
     padding: 3px 7px;

@@ -29,7 +29,7 @@ nav {
          padding-left:20px;     
    }
 }
-.explore-contaier {
+.explore-container {
   @include flexcolumn;
   @include lightgray-background(#faf5f5);
   width: 110%;
@@ -48,12 +48,34 @@ nav {
 }  
   .button-container {
     height: 65px;
-
-        & .explore-button {
+  }
+        .explore-button {
            @include exp-buttonshape;
            @include exp-buttoncolor;
+           position: relative;
+           z-index: 1;
+           
+           &:hover {
+             &::after{
+              opacity:1;
+           }
    }
-}
+       &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom, #9356dc, #ff79da);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 20px;
+       }
+  }
+
+
   .booking-steps-container {
     @include flexcolumn; 
 
@@ -61,24 +83,34 @@ nav {
           @include container-titles;
     }
 }
+
   .mini-cards {
     @include flexrow;
     @include cards (20px);
     padding: 0 20px;
     height: 70px;
-    width: 270px;
-           
-              & .number {
-                @include purplenumbers
+    width: 270px; 
+    transition: background-color 300ms 150ms; box-shadow: 300ms;
+
+          &:hover {
+          background-color: lighten(#f8f8f8, 2);
+          box-shadow:  0 4px 8px 0 #5e5e5e;
+    }    
+  }
+
+     .number {
+        @include purplenumbers
               }
-                  & .icon {
-                    margin-right: 10px;
-                    color:#a5a3a3;
-                     & :hover {
-                       color: #9356dc;
-                     }
-              }
-}
+                .icon {
+                  margin-right: 10px;
+                  color:#a5a3a3;
+
+                   & :hover { 
+                     color: #9356dc;
+              } 
+            }  
+                     
+
   .wrapper-restaurants {
     @include flexcolumn; 
     @include lightgray-background(#faf5f5);
@@ -87,7 +119,7 @@ nav {
     height: 1125px;
     
 
-         & .wrapper-restaurants-title{
+         .wrapper-restaurants-title{
           @include container-titles;
          }
 }
@@ -119,14 +151,26 @@ nav {
   .card-city-info {
     width: 93%;
     height: 20px;
-}
+  }
+
        .heart {
           align-self: flex-end;
           font-size: 25px;
           margin-right: 24px;
           margin-top: -21px;
           padding-bottom: 12px;
-}
+       }
+        .black-hearth {
+          margin-left: -25px;
+          color:$whitecolor;
+          transition: background-color 300ms 150ms;
+
+                &:active {
+                 color: #9356dc;
+                }
+        }
+          
+
   footer{
     @include lightgray-background (#424141f4) ;
     @include container-margin (23px, -18px);
