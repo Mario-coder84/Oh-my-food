@@ -23,6 +23,7 @@
       display:flex;
       flex-direction:row;
       align-items: center;
+     
   }
 
   @mixin flexcolumn {
@@ -36,9 +37,12 @@
     font-size: larger;
   }
 
-  @mixin exp-buttonshape {
-    padding: 15px 20px;
-    border-radius: 20px;
+  @mixin exp-buttonshape ($padtop, $padright, $padbot, $padleft, $borradius) {
+    padding-top: $padtop;
+    padding-right: $padright;
+    padding-bottom: $padbot;
+    padding-left: $padleft;
+    border-radius: $borradius;
     border:none;
   }
 
@@ -48,9 +52,11 @@
     color: white;
     background: linear-gradient(to bottom, #ff79da, #9356dc);
   }
+   
   @mixin container-titles {
     font-family: $font-text;
     align-self: flex-start;
+    margin-left: 20px;
   }
   @mixin cards ($margin-bottom) {
     
@@ -86,3 +92,80 @@
     margin-left: -20px;
     padding-bottom: 10px;
   }
+  @mixin newgreen {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $color-tertiary;
+    padding: 5px 20px;
+    background-color: $color-tertiary;
+    color: #2d6b5c;
+    border-radius: 4px;
+    z-index: 1;
+    top: 5px;
+    font-family: $font-text;
+    margin-left: 200px;
+    margin-top: -215px;
+  }
+
+  @mixin leftarrow {
+    font-size: 20px; 
+    padding-left:15px;
+    justify-content: flex-start;
+    margin-right: 40px;
+  }
+
+  @mixin logo-restaurants {
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+     
+  }
+ @mixin rest-names {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: $font-title;
+  font-size: 18px;
+ }
+    
+   @mixin dishes-under-score {
+    width: 13%;
+    margin-left: 2px;
+    color: #99e2d0;
+    size:20px;
+    border: 1px solid;
+    margin-top: -7px;
+   }
+
+  @mixin rest-cards {
+    border: 1px none #cacaca;
+    border-radius: 15px;
+    margin-bottom: $margin-bottom;
+    font-family: $font-text;
+    background-color:#f8f8f8;
+    box-shadow: 0 4px 8px 0 #cacaca;
+    width: 95%;
+    margin-left: 9px; 
+  }
+
+  @mixin dishname {
+     margin-left: 20px;
+     padding-top: 1px;
+     font-weight: bold;
+  }
+
+  @mixin cardlightfont {
+    margin-left: 20px;
+    margin-top: -25px;
+    font-size: 14px;
+  }
+
+  @mixin dishprice {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: -50px;
+    margin-right: 10px;   
+  }
+  
