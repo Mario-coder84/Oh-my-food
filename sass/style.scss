@@ -2,6 +2,8 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
+
+@media screen and (min-width:255px)  {  
 nav {
   @include flexcolumn;
 
@@ -43,14 +45,15 @@ nav {
 
     }
   }
-           .navcopy{
+           .navcopy {
               font-weight: lighter; 
 }  
+
   .button-container {
     height: 65px;
   }
         .explore-button {
-           @include exp-buttonshape;
+           @include exp-buttonshape (15px, 20px, 15px, 20px,20px);
            @include exp-buttoncolor;
            position: relative;
            z-index: 1;
@@ -58,24 +61,24 @@ nav {
            &:hover {
              &::after{
               opacity:1;
+             }
+          }
+                    &::after {
+                       content: "";
+                       position: absolute;
+                       top: 0;
+                       right: 0;
+                       bottom: 0;
+                       left: 0;
+                       background: linear-gradient(to bottom, #9356dc, #ff79da);
+                       opacity: 0;
+                       z-index: -1;
+                       transition: opacity 250ms;
+                       border-radius: 20px;
            }
    }
-       &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(to bottom, #9356dc, #ff79da);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-        border-radius: 20px;
-       }
-  }
-
-
+            
+              
   .booking-steps-container {
     @include flexcolumn; 
 
@@ -148,7 +151,7 @@ nav {
               height: 34px;
              }
 }         
-  .card-city-info {
+   .card-city-info {
     width: 93%;
     height: 20px;
   }
@@ -158,20 +161,25 @@ nav {
           font-size: 25px;
           margin-right: 24px;
           margin-top: -21px;
-          padding-bottom: 12px;
+          padding-bottom: 27px;
        }
         .black-hearth {
           margin-left: -25px;
           color:$whitecolor;
           transition: background-color 300ms 150ms;
-
-                &:active {
-                 color: #9356dc;
-                }
+          &:hover {
+            color: $color-primary;
+            transform: scaleX(1);
+            animation-name: color-hearth;
+            animation-duration: 1000ms;
         }
-          
+        
+      }
+      .new-div {
+        @include newgreen;            
+      }
 
-  footer{
+  footer {
     @include lightgray-background (#424141f4) ;
     @include container-margin (23px, -18px);
     color: $whitecolor; 
@@ -199,3 +207,230 @@ nav {
             
           }
   }
+
+  @keyframes color-hearth{
+    0% {
+      transform: scaleX(0);
+  }
+  100% {
+      transform: scaleX(1);
+  }
+}
+}
+
+ @media screen and (min-width:768px)  {     
+  
+    nav .Myfood-logo .logo {
+      margin-left: 2px;
+    }
+    .location-icon {
+      margin-left: -35px;
+    }
+    .booking-steps-container .booking-steps-title {
+      align-self: center;
+      margin-left: 0px;
+  }
+    
+    .wrapper-restaurants .wrapper-restaurants-title {
+      align-self: center;
+      margin-left: -18px;
+  }
+  .footer-list {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -58px;
+  }
+
+  @media screen and (min-width:1280px)  {   
+      
+    .booking-steps-wrapper{
+      display: flex;
+      flex-direction: row;
+      height: 155px;
+    }
+    .mini-cards {
+      margin-left: 50px;
+    }
+    .wrapper-restaurants{
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: 732px;
+    }
+    .wrapper-restaurants .wrapper-restaurants-title {
+      align-self: flex-start;
+      margin-left: 38px;
+    }
+    .cards{
+      flex-direction: row;
+      width: 30%;
+    }
+    .restaurant-card {
+      margin-left: 17%;
+         &.last{
+            margin-left: 20.3%;
+      }
+    }
+    .wrapper-restaurant-info {
+      margin-left: -305px;
+      margin-bottom: -200px;
+    }
+    .newdiv {
+      margin-top: -200px;
+    }
+    footer {
+      height: 150px;
+    } 
+        &.footer-list {
+            justify-content: space-evenly;
+    }
+  }  
+ }
+
+ /* The full pallete menu */
+
+ .wrapper-logo {
+  @include flexrow;
+  height: 60px;
+  width: 100%;
+        
+       & .left-arrow {
+         @include leftarrow;
+       }      
+         & .logo {
+           @include logo-restaurants;
+           @include logo-size  (160px, 32px);
+         }
+        }
+
+
+ .pallete-pic {
+  height: 40%;
+  width: 100%;
+}
+
+ .wrapper-pallete-cards {
+  @include lightgray-background (#faf5f5);
+  z-index: 3;
+  position: relative;
+  margin-top: -45px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+
+ }
+
+  
+     
+            .menu-wrapper-entrees {
+             margin-bottom: 45px; 
+             animation: fadeIn 5s;
+            animation-delay: 10ms;
+        
+           @keyframes fadeIn {
+           0% {opacity: 0; margin-top: -10px;}
+           100% {opacity:1 ; margin-top:10px;}
+         }  
+        
+        }
+         .menu-wrapper-mains {
+          margin-bottom: 45px; 
+          animation: fadeIn 7s;
+          animation-delay: 200ms;
+    
+         
+        @keyframes fadeIn {
+        0% {opacity: 0; margin-top: -10px;}
+        100% {opacity:1 ; margin-top:10px;}
+      }  
+         }
+         .menu-wrapper-desserts {
+          margin-bottom: 45px; 
+          animation: fadeIn 9s;
+          animation-delay: 400ms;
+    
+         
+        @keyframes fadeIn {
+        0% {opacity: 0; margin-top: -10px;}
+        100% {opacity:1 ; margin-top:10px;}
+      }  
+         }
+
+  
+                 .wrapper-cards-title {
+                       display: flex;
+                       flex-direction: row;
+                      justify-content: space-around;
+             
+                                   & .resto-name {
+                                     @include rest-names;
+   
+                }
+ }
+   
+ .rest-hearth {
+            margin-bottom: -20px;
+     }  
+
+   .title-dish-card {
+         font-family: $font-text;
+         margin-left: 20px;
+
+              & hr {
+                @include dishes-under-score;
+              }
+}
+
+.dish-card {
+    @include rest-cards;
+    height: 79px; 
+    display: flex;
+    flex-direction: column;
+
+              & .dish-name {
+                @include dishname;
+              }
+
+                  & .card-light-font {
+                    @include cardlightfont; 
+                  }
+                
+                         & .dish-price {
+                             @include dishprice;   
+                  }
+}
+
+.button-order-container {
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 30px;
+}
+              .explore-button {
+                @include exp-buttonshape (15px, 65px, 15px, 65px, 40px);
+                @include exp-buttoncolor;
+                position: relative;
+                z-index: 1;
+                
+                &:hover {
+                  &::after{
+                   opacity:1;
+                  }
+                }
+                         &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background: linear-gradient(to bottom, #9356dc, #ff79da);
+                            opacity: 0;
+                            z-index: -1;
+                            transition: opacity 250ms;
+                            border-radius: 40px;
+                }
+           
+   }
+
+              
+  
