@@ -1,0 +1,24 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "\"Oh my food project\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mario-coder84/Oh-my-food.git"
+  },
+  "keywords": [
+    "Oh",
+    "my",
+    "food"
+  ],
+  "author": "Mario Beltran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mario-coder84/Oh-my-food/issues"
+  },
+  "homepage": "https://github.com/Mario-coder84/Oh-my-food#readme"
+}
