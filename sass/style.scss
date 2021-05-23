@@ -4,6 +4,91 @@
 
 
 @media screen and (min-width:255px)  {  
+
+  
+/*
+.loading {
+    position: relative;
+    width: 100%;
+    height:100%;
+    margin: 10px;
+          
+          & .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border: solid 4px transparent;
+            border-top-color:$color-secondary;
+            border-left-color:$color-secondary;
+            border-radius: 50%;
+            animation: loader 1.4s linear infinite;
+          }
+                 & .loader-purple {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: 70%;
+                  height: 70%;
+                  border: solid 4px transparent;
+                  border-top-color:$color-primary;
+                  border-left-color: $color-primary;
+                  border-radius: 50%;
+                  animation: loader-purple 1.4s linear infinite;
+                 }
+  }
+  
+  @keyframes loader {
+     0%{
+       transform: translate(-50%, -50%) rotate(0deg);
+     }
+     100%{
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-purple {
+    0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+     transform: translate(-50%, -50%) rotate(360deg);
+   }
+  }
+
+
+.loading {
+    width: 150%; 
+    height: 150%;
+                                where?? display: none;
+       
+        & .loader {
+          display: flex;
+          justify-content: center;
+         
+        
+                &::after {
+                  content: "";
+                  width: 50px;
+                  height: 50px;
+                  border: 10px solid $color-tertiary;
+                  border-top-color: $color-secondary;
+                  border-radius: 50%;
+                  animation: loading 1s ease infinite;
+                  display: flex;
+                }
+        }
+}
+
+
+@keyframes loading {
+  to {
+      transform: rotate(1turn);
+  }
+}
+*/
+
 nav {
   @include flexcolumn;
 
@@ -172,6 +257,7 @@ nav {
             transform: scaleX(1);
             animation-name: color-hearth;
             animation-duration: 1000ms;
+            animation-fill-mode: forwards;
         }
         
       }
@@ -220,11 +306,20 @@ nav {
 
  @media screen and (min-width:768px)  {     
   
-    nav .Myfood-logo .logo {
-      margin-left: 2px;
+    nav .Myfood-logo {
+      justify-content: center;
+          & .logo {
+            margin-left: 0px;
+            padding-left: 0px;   
+          }
     }
     .location-icon {
-      margin-left: -35px;
+      margin-left: -127px;
+      justify-content: center;
+      padding-left: 153px;
+            & p {
+              margin-right: 30px;
+            }
     }
     .booking-steps-container .booking-steps-title {
       align-self: center;
@@ -318,16 +413,15 @@ nav {
 
  }
 
-  
      
             .menu-wrapper-entrees {
              margin-bottom: 45px; 
              animation: fadeIn 5s;
-            animation-delay: 10ms;
+             animation-delay: 10ms;
         
-           @keyframes fadeIn {
-           0% {opacity: 0; margin-top: -10px;}
-           100% {opacity:1 ; margin-top:10px;}
+                       @keyframes fadeIn {
+                       0% {opacity: 0; margin-top: -10px;}
+                       100% {opacity:1 ; margin-top:10px;}
          }  
         
         }
@@ -353,8 +447,6 @@ nav {
         100% {opacity:1 ; margin-top:10px;}
       }  
          }
-
-  
                  .wrapper-cards-title {
                        display: flex;
                        flex-direction: row;
@@ -390,14 +482,99 @@ nav {
               }
 
                   & .card-light-font {
-                    @include cardlightfont; 
-                  }
-                
+                    @include cardlightfont;                    
+                            }   
+                          
                          & .dish-price {
                              @include dishprice;   
+                             transition: transform 1550ms ease-out;
                   }
+                              & .green-wrapper {
+                                  background-color: $color-tertiary;
+                                  color:white;
+                                  display: flex;
+                                  flex-direction: row;
+                                  width: 6%;
+                                  justify-content: flex-end;
+                                  padding: 30px 20px;
+                                  border-bottom-right-radius: 10px;
+                                  border-top-right-radius: 10px;
+                                  align-self: flex-end;
+                                  position: absolute;
+                                  opacity: 0;
+                          }
+                        }
+  .dish-card {
+     &:hover .dish-price {
+           transform: translate(-58px,0);
+     }
+  }
+  
+  .dish-card{
+       &:hover .green-wrapper{
+           animation-name: check-in;
+           animation-duration: 1800ms;
+           transform-origin: right;
+           animation-fill-mode: forwards;
+          
+           
+         }
+       }
+      
+
+@keyframes check-in {
+0% {
+   transform:scaleX(0);
+    opacity: 0;
+}
+100% {
+  transform: scaleX(1);
+  opacity: 1;
+}
 }
 
+
+.dish-card {
+      &:hover .check {
+        transform: rotate(0deg);
+      }
+}
+
+.check {
+      transform: rotate(-480deg);
+      transition: transform 800ms ease-in-out;
+}
+
+.trimmed {
+  width: 100%;
+}
+
+.dish-card {
+  &:hover .trimmed{
+animation-name: trimmedtext;
+animation-duration: 1300ms;
+transform-origin: right;
+animation-fill-mode: forwards;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+  }
+}
+@keyframes trimmedtext{
+0% {
+  transform: unset;
+  width: 100%;
+}
+50% {
+  transform: unset;
+  width: 80%;
+}
+100% {
+  transform: unset;
+  width: 63%;
+}
+}
+  
 .button-order-container {
         width: 100%;
         display:flex;
@@ -430,7 +607,64 @@ nav {
                             border-radius: 40px;
                 }
            
-   }
+   
+          }
+      
+        
 
-              
-  
+
+
+
+       
+/* Start Samita Code 
+
+     .dish-card {
+      width: 100%;
+      height: 100px;
+      background: salmon;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 10px
+     }
+     .green-wrapper {
+      width: 300px;
+      height: 100px;
+      background: orange;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+     }
+     .content {
+      max-width: 100%;
+      width: 100%;
+      height: 100px;
+      background: royalblue;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      transition: width 2s,
+     }
+    
+    .content:hover {
+      width: 80%;
+    }
+    @media only screen and (max-width: 600px){
+      .content:active {
+        width: 80%;
+      }
+  }
+
+    @keyframes content {
+
+      0% {
+        width: 100%;
+        }
+        100% {
+          width: 50%;
+          }
+      }
+End Samita code */
