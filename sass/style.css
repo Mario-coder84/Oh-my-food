@@ -1,86 +1,60 @@
 @media screen and (min-width: 255px) {
-  /*
-.loading {
+  .lds-hourglass {
+    display: inline-block;
     position: relative;
-    width: 100%;
-    height:100%;
-    margin: 10px;
-          
-          & .loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            border: solid 4px transparent;
-            border-top-color:$color-secondary;
-            border-left-color:$color-secondary;
-            border-radius: 50%;
-            animation: loader 1.4s linear infinite;
-          }
-                 & .loader-purple {
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  width: 70%;
-                  height: 70%;
-                  border: solid 4px transparent;
-                  border-top-color:$color-primary;
-                  border-left-color: $color-primary;
-                  border-radius: 50%;
-                  animation: loader-purple 1.4s linear infinite;
-                 }
+    width: 80px;
+    height: 80px;
   }
-  
-  @keyframes loader {
-     0%{
-       transform: translate(-50%, -50%) rotate(0deg);
-     }
-     100%{
-      transform: translate(-50%, -50%) rotate(360deg);
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    -webkit-animation: lds-hourglass 1.2s infinite;
+            animation: lds-hourglass 1.2s infinite;
+  }
+  @-webkit-keyframes lds-hourglass {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+              animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      -webkit-transform: rotate(900deg);
+              transform: rotate(900deg);
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      -webkit-transform: rotate(1800deg);
+              transform: rotate(1800deg);
     }
   }
-  
-  @keyframes loader-purple {
-    0%{
-      transform: translate(-50%, -50%) rotate(0deg);
+  @keyframes lds-hourglass {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+              animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-    100%{
-     transform: translate(-50%, -50%) rotate(360deg);
-   }
+    50% {
+      -webkit-transform: rotate(900deg);
+              transform: rotate(900deg);
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      -webkit-transform: rotate(1800deg);
+              transform: rotate(1800deg);
+    }
   }
-
-
-.loading {
-    width: 150%; 
-    height: 150%;
-                                where?? display: none;
-       
-        & .loader {
-          display: flex;
-          justify-content: center;
-         
-        
-                &::after {
-                  content: "";
-                  width: 50px;
-                  height: 50px;
-                  border: 10px solid $color-tertiary;
-                  border-top-color: $color-secondary;
-                  border-radius: 50%;
-                  animation: loading 1s ease infinite;
-                  display: flex;
-                }
-        }
-}
-
-
-@keyframes loading {
-  to {
-      transform: rotate(1turn);
-  }
-}
-*/
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -949,57 +923,4 @@
   transition: opacity 250ms;
   border-radius: 40px;
 }
-
-/* Start Samita Code 
-
-     .dish-card {
-      width: 100%;
-      height: 100px;
-      background: salmon;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin: 10px
-     }
-     .green-wrapper {
-      width: 300px;
-      height: 100px;
-      background: orange;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 1;
-     }
-     .content {
-      max-width: 100%;
-      width: 100%;
-      height: 100px;
-      background: royalblue;
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 2;
-      transition: width 2s,
-     }
-    
-    .content:hover {
-      width: 80%;
-    }
-    @media only screen and (max-width: 600px){
-      .content:active {
-        width: 80%;
-      }
-  }
-
-    @keyframes content {
-
-      0% {
-        width: 100%;
-        }
-        100% {
-          width: 50%;
-          }
-      }
-End Samita code */
 /*# sourceMappingURL=style.css.map */
