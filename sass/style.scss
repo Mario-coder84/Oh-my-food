@@ -2,10 +2,6 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
-
-
-
-
 @media screen and (min-width:255px)  {  
 
   .lds-hourglass {
@@ -170,10 +166,11 @@ nav {
             overflow: hidden;
           
                & .card-img {
-                  @include cardimg
-                 
-               }
-}  
+                  @include cardimg;
+                  object-fit: cover;
+                }
+}
+
   .wrapper-restaurant-info {
       @include flexcolumn;
       @include cards (20px);
@@ -222,6 +219,7 @@ nav {
     color: $whitecolor; 
     font-family: $font-text;
     height: 250px;
+    text-decoration: none;
        
          & .mini-logo{
           filter: invert(100%);
@@ -234,16 +232,20 @@ nav {
          }
   }  
   .footer-list {
-    @include footlist;
-         
-         li {
+    @include footlist; 
+  }
+      .footer-link {
+          text-decoration: none;
+          color: $whitecolor;
+      
+       & li {
             padding-bottom: 10px;
          }
           & .iconlist {
-            padding-right: 10px;
-            
+            padding-right: 10px; 
           }
   }
+
 
   @keyframes color-hearth{
     0% {
@@ -332,7 +334,7 @@ nav {
   }  
  }
 
- /* The full pallete menu */
+ /* Restaurants Menu */
 
  .wrapper-logo {
   @include flexrow;
@@ -348,17 +350,23 @@ nav {
          }
         }
 
-
- .pallete-pic {
-  height: 40%;
+.picture-container{
   width: 100%;
+  height: 250px;
+  overflow: hidden;
+
+            .pallete-pic {
+                  height: 89%;
+                  width: 100%;
+                  object-fit: cover;
+                }
 }
 
  .wrapper-pallete-cards {
   @include lightgray-background (#faf5f5);
   z-index: 3;
   position: relative;
-  margin-top: -45px;
+  margin-top: -67px;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
 
@@ -401,10 +409,12 @@ nav {
                  .wrapper-cards-title {
                        display: flex;
                        flex-direction: row;
-                      justify-content: space-around;
+                       justify-content: space-around;
+                       margin-right: -17px;
              
                                    & .resto-name {
                                      @include rest-names;
+                                     font-size: 17px;
    
                 }
  }
@@ -501,14 +511,14 @@ nav {
 }
 
 .dish-card {
-  &:hover .trimmed{
-animation-name: trimmedtext;
-animation-duration: 1300ms;
-transform-origin: right;
-animation-fill-mode: forwards;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+          &:hover .trimmed{
+           animation-name: trimmedtext;
+          animation-duration: 1300ms;
+          transform-origin: right;
+          animation-fill-mode: forwards;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
   }
 }
 @keyframes trimmedtext{
@@ -557,11 +567,104 @@ text-overflow: ellipsis;
                             transition: opacity 250ms;
                             border-radius: 40px;
                 }
-           
-   
           }
-      
+
+
+@media screen and (min-width:768px) {
+  
+  .wrapper-logo{
+       justify-content: space-evenly;
+       margin-left: -137px;
+    } 
+
+  .wrapper-cards-title {
+        & .resto-name {
+           font-size: 20px;     
+
+      }
         
+    }
+    .dish-card {
+      & .green-wrapper {
+        background-color: $color-tertiary;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        width: 6%;
+        justify-content: flex-end;
+        padding: 28px 20px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        align-self: flex-end;
+        position: absolute;
+        opacity: 0;
+      }
+  }
 
+             .dish-card {
+                  &:hover .dish-price {
+                  transform: translate(-84px,0);
+  }
+}
+             .dish-card{
+                 &:hover .green-wrapper{
+                    animation-name: check-in;
+                    animation-duration: 1800ms;
+                    transform-origin: right;
+                    animation-fill-mode: forwards; 
+        
+      }
+    }
+  .check {
+    margin-right: 15px;
+    font-size: 20px;
+  } 
 
+  @media screen and (min-width:1280px) {
+    .wrapper-logo{
+      justify-content: space-evenly;
+      margin-left: -235px;
 
+             & .left-arrow {
+                margin-left: -40px;
+                padding-left: 1px;
+                font-size: 30px;
+             }
+                 & .logo {
+                  width: 220px;
+                  height: 36px;
+                 }
+   }  
+   .dish-card {
+     & .green-wrapper {
+       padding: 28px 1px;
+    }
+  }
+  .check {
+    margin-right: 25px;
+
+  }
+  @media screen and (min-width:1460px) {
+    .wrapper-logo{
+      margin-left: -19%;
+  }
+    .wrapper-cards-title{
+      justify-content: flex-start;
+      margin-left: 32px;
+           
+               & .resto-name {
+                margin-right: 40px;
+               }
+  }
+  .check {
+    margin-right: 35px;
+  }
+  .dish-card {
+    &:hover .dish-price {
+    transform: translate(-90px,0);
+}
+}
+
+  }
+  }
+}

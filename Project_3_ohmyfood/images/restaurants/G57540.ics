@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Adidas//Pump Omni Zone II Shoes//EN_AU
+BEGIN:VEVENT
+UID:G57540@www.reebok.com.au
+SEQUENCE:0
+DTSTAMP:20210517T044336Z
+DTSTART:20210521T140000Z
+DTEND:20210521T141500Z
+SUMMARY:Pump Omni Zone II Shoes Launch
+DESCRIPTION:Get ready to get your hands on a pair of Pump Omni Zone II Sho
+ es. Go to the release https://www.reebok.com.au/pump-omni-zone-ii-shoes/G5
+ 7540.html?cm_mmc=AdiEmail_BEH-_-Multiple-_-launch-_-calendar-_-calendar_re
+ minder-_-dv:eCom-_-cn:ProductLaunchCalendar-_-pc:Multiple&cm_mmc1=GLOBAL&c
+ m_mmc2=reebok-GLOBAL-eCom-Email-BEH-Multiple-Multiple-GLOBAL-ProductLaunch
+ Calendar-Multiple-170521
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:Pump Omni Zone II Shoes Launch
+END:VALARM
+URL;VALUE=URI:https://www.reebok.com.au/pump-omni-zone-ii-shoes/G57540.htm
+ l?cm_mmc=AdiEmail_BEH-_-Multiple-_-launch-_-calendar-_-calendar_reminder-_
+ -dv:eCom-_-cn:ProductLaunchCalendar-_-pc:Multiple&cm_mmc1=GLOBAL&cm_mmc2=r
+ eebok-GLOBAL-eCom-Email-BEH-Multiple-Multiple-GLOBAL-ProductLaunchCalendar
+ -Multiple-170521
+END:VEVENT
+END:VCALENDAR
