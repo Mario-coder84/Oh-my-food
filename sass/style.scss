@@ -2,39 +2,13 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
-@media screen and (min-width:255px)  {  
 
-  .lds-hourglass {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-hourglass:after {
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 32px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    animation: lds-hourglass 1.2s infinite;
-  }
-  @keyframes lds-hourglass {
-    0% {
-      transform: rotate(0);
-      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      transform: rotate(1800deg);
-    }
-  }  
+.big-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}  
+
+@media screen and (min-width:255px)  {  
 
 nav {
   @include flexcolumn;
@@ -47,16 +21,16 @@ nav {
       margin-bottom:2px;
 
       & .logo{
-        @include container-margin(30px, 50px);
+        @include container-margin(30px, 64px);
         @include logo-size (194px, 51px);
       }
     }
 }
  .location-icon {
   @include flexrow;
-  width: 100%;
+  width: 105%;
   @include lightgray-background(#ebe9e9);
-  @include container-margin(120px, 50px);
+  justify-content: center;
 
       p {
          @include font-location;
@@ -66,8 +40,7 @@ nav {
 .explore-container {
   @include flexcolumn;
   @include lightgray-background(#faf5f5);
-  width: 110%;
-  margin-left: -16;
+  width: 105%;
   font-family: $font-text;
   text-align: center;
 
@@ -125,7 +98,7 @@ nav {
     padding: 0 20px;
     height: 70px;
     width: 270px; 
-    transition: background-color 300ms 150ms; box-shadow: 300ms;
+    transition: background-color 300ms 150ms;
 
           &:hover {
           background-color: lighten(#f8f8f8, 2);
@@ -149,8 +122,7 @@ nav {
   .wrapper-restaurants {
     @include flexcolumn; 
     @include lightgray-background(#faf5f5);
-    @include container-margin (23px, -18px); 
-    width: 100%;
+    width: 105%;
     height: 1125px;
     
 
@@ -220,6 +192,7 @@ nav {
     font-family: $font-text;
     height: 250px;
     text-decoration: none;
+    width: 102%;
        
          & .mini-logo{
           filter: invert(100%);
@@ -231,21 +204,25 @@ nav {
 
          }
   }  
+
   .footer-list {
     @include footlist; 
-  }
-      .footer-link {
-          text-decoration: none;
-          color: $whitecolor;
-      
-       & li {
-            padding-bottom: 10px;
-         }
-          & .iconlist {
-            padding-right: 10px; 
-          }
-  }
 
+         & li { 
+          margin-bottom: 20px; 
+         }
+           
+          & .footer-link {
+                text-decoration: none;
+                color: $whitecolor;
+                margin-bottom: 10px;
+           
+                    & .iconlist {
+                     padding-right: 10px; 
+          } 
+                
+        }
+  }
 
   @keyframes color-hearth{
     0% {
@@ -267,9 +244,7 @@ nav {
           }
     }
     .location-icon {
-      margin-left: -127px;
       justify-content: center;
-      padding-left: 153px;
             & p {
               margin-right: 30px;
             }
@@ -310,7 +285,8 @@ nav {
     }
     .cards{
       flex-direction: row;
-      width: 30%;
+      width: 29%;
+      margin-left: 2px;
     }
     .restaurant-card {
       margin-left: 17%;

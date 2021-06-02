@@ -1,60 +1,9 @@
+.big-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 255px) {
-  .lds-hourglass {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-hourglass:after {
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 32px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    -webkit-animation: lds-hourglass 4s;
-            animation: lds-hourglass 4s;
-  }
-  @-webkit-keyframes lds-hourglass {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-              animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      -webkit-transform: rotate(900deg);
-              transform: rotate(900deg);
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      -webkit-transform: rotate(1800deg);
-              transform: rotate(1800deg);
-    }
-  }
-  @keyframes lds-hourglass {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-              animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      -webkit-transform: rotate(900deg);
-              transform: rotate(900deg);
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-              animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      -webkit-transform: rotate(1800deg);
-              transform: rotate(1800deg);
-    }
-  }
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,16 +21,17 @@
     display: -ms-flexbox;
     display: flex;
     background-color: #fff;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px none #a5a3a3;
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 0px 10px #cacaca;
-            box-shadow: 0px 0px 0px 10px #cacaca;
+    width: 105%;
+    -webkit-box-shadow: 0px 0px 0px 2px #cacaca;
+            box-shadow: 0px 0px 0px 2px #cacaca;
     margin-top: -9px;
     margin-bottom: 2px;
   }
   nav .Myfood-logo .logo {
-    margin-left: 50px;
+    margin-left: 64px;
     padding-left: 30px;
     width: 194px;
     height: 51px;
@@ -97,10 +47,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    width: 105%;
     background-color: #ebe9e9;
-    margin-left: 50px;
-    padding-left: 120px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .location-icon p {
     font-family: Roboto;
@@ -119,8 +70,7 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #faf5f5;
-    width: 110%;
-    margin-left: -16;
+    width: 105%;
     font-family: Roboto;
     text-align: center;
   }
@@ -211,8 +161,6 @@
     width: 270px;
     -webkit-transition: background-color 300ms 150ms;
     transition: background-color 300ms 150ms;
-    -webkit-box-shadow: 300ms;
-            box-shadow: 300ms;
   }
   .mini-cards:hover {
     background-color: #fdfdfd;
@@ -247,9 +195,7 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #faf5f5;
-    margin-left: -18px;
-    padding-left: 23px;
-    width: 100%;
+    width: 105%;
     height: 1125px;
   }
   .wrapper-restaurants .wrapper-restaurants-title {
@@ -375,6 +321,7 @@
     font-family: Roboto;
     height: 250px;
     text-decoration: none;
+    width: 102%;
   }
   footer .mini-logo {
     -webkit-filter: invert(100%);
@@ -399,14 +346,15 @@
     margin-left: -20px;
     padding-bottom: 10px;
   }
-  .footer-link {
+  .footer-list li {
+    margin-bottom: 20px;
+  }
+  .footer-list .footer-link {
     text-decoration: none;
     color: #fff;
+    margin-bottom: 10px;
   }
-  .footer-link li {
-    padding-bottom: 10px;
-  }
-  .footer-link .iconlist {
+  .footer-list .footer-link .iconlist {
     padding-right: 10px;
   }
   @-webkit-keyframes color-hearth {
@@ -442,11 +390,9 @@
     padding-left: 0px;
   }
   .location-icon {
-    margin-left: -127px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-left: 153px;
   }
   .location-icon p {
     margin-right: 30px;
@@ -507,7 +453,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 30%;
+    width: 29%;
+    margin-left: 2px;
   }
   .restaurant-card {
     margin-left: 17%;
@@ -701,7 +648,6 @@
   width: 13%;
   margin-left: 2px;
   color: #99e2d0;
-  size: 20px;
   border: 1px solid;
   margin-top: -7px;
 }
