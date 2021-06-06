@@ -6,6 +6,10 @@
 .big-container {
   max-width: 1500px;
   margin: 0 auto;
+  position: relative;
+  animation-name: big-container;
+  animation-duration: 2s;
+  display: block;
 }  
 
 @media screen and (min-width:255px)  {  
@@ -427,18 +431,7 @@ nav {
                              transition: transform 1550ms ease-out;
                   }
                               & .green-wrapper {
-                                  background-color: $color-tertiary;
-                                  color:white;
-                                  display: flex;
-                                  flex-direction: row;
-                                  width: 6%;
-                                  justify-content: flex-end;
-                                  padding: 30px 20px;
-                                  border-bottom-right-radius: 10px;
-                                  border-top-right-radius: 10px;
-                                  align-self: flex-end;
-                                  position: absolute;
-                                  opacity: 0;
+                              @include green-wrapper
                           }
                         }
   .dish-card {
@@ -644,3 +637,52 @@ nav {
   }
   }
 }
+
+.wrapper-loader {
+ @include wrapper-loader;
+}
+.loader {
+ @include spinloader;
+}
+
+@keyframes big-container {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+   @keyframes wrapper-color {
+    0% {
+    background: $whitecolor;
+    opacity: 1;
+  }
+    50% {
+    background: $whitecolor;
+    opacity: 1;
+  }
+    100% {
+      opacity: 0;
+    }
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% { 
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+

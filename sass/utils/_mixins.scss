@@ -168,4 +168,45 @@
     margin-top: -50px;
     margin-right: 10px;   
   }
-  
+  @mixin green-wrapper {
+    background-color: $color-tertiary;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    width: 6%;
+    justify-content: flex-end;
+    padding: 30px 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    align-self: flex-end;
+    position: absolute;
+    opacity: 0;
+    
+  }
+  @mixin wrapper-loader {
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    display: block;
+    position: fixed;
+    left: 0%;
+    top: 25%;
+    right: 80%;
+    bottom: 25%;
+    animation: wrapper-color 4s;
+  }
+  @mixin spinloader {
+    border: 16px solid $color-primary;
+    border-radius: 50%;
+    border-top: 16px solid $whitecolor;
+    width: 80px;
+    height: 80px;
+    animation: spin 5s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }

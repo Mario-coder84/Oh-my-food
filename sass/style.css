@@ -1,6 +1,12 @@
 .big-container {
   max-width: 1500px;
   margin: 0 auto;
+  position: relative;
+  -webkit-animation-name: big-container;
+          animation-name: big-container;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  display: block;
 }
 
 @media screen and (min-width: 255px) {
@@ -982,6 +988,123 @@
   .dish-card:hover .dish-price {
     -webkit-transform: translate(-90px, 0);
             transform: translate(-90px, 0);
+  }
+}
+
+.wrapper-loader {
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  display: block;
+  position: fixed;
+  left: 0%;
+  top: 25%;
+  right: 80%;
+  bottom: 25%;
+  -webkit-animation: wrapper-color 4s;
+          animation: wrapper-color 4s;
+}
+
+.loader {
+  border: 16px solid #9356dc;
+  border-radius: 50%;
+  border-top: 16px solid #fff;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 5s linear;
+          animation: spin 5s linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes big-container {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes big-container {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes wrapper-color {
+  0% {
+    background: #fff;
+    opacity: 1;
+  }
+  50% {
+    background: #fff;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wrapper-color {
+  0% {
+    background: #fff;
+    opacity: 1;
+  }
+  50% {
+    background: #fff;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
