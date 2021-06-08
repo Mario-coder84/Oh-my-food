@@ -666,8 +666,8 @@
   background-color: #f8f8f8;
   -webkit-box-shadow: 0 4px 8px 0 #cacaca;
           box-shadow: 0 4px 8px 0 #cacaca;
-  width: 95%;
-  margin-left: 9px;
+  width: 96%;
+  margin-left: 5px;
   height: 79px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -686,8 +686,8 @@
 
 .dish-card .card-light-font {
   margin-left: 20px;
-  margin-top: -25px;
-  font-size: 14px;
+  margin-top: -20px;
+  font-size: 12.5px;
 }
 
 .dish-card .dish-price {
@@ -724,8 +724,8 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 30px 20px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: absolute;

@@ -481,7 +481,7 @@ nav {
 
 .dish-card {
           &:hover .trimmed{
-           animation-name: trimmedtext;
+          animation-name: trimmedtext;
           animation-duration: 1300ms;
           transform-origin: right;
           animation-fill-mode: forwards;
