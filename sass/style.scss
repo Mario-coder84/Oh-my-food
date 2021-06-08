@@ -19,13 +19,15 @@ nav {
 
     & .Myfood-logo {
       display:flex;
+      flex-direction: row;
+      justify-content: center;
       @include lightgray-background ($whitecolor);
       @include div-border;
       margin-top: -9px;
       margin-bottom:2px;
 
+
       & .logo{
-        @include container-margin(0, 98px);
         @include logo-size (194px, 51px);
       }
     }
