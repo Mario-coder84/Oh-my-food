@@ -326,13 +326,13 @@
   }
   footer {
     background-color: #424141f4;
-    margin-left: -18px;
+    margin-left: -37px;
     padding-left: 23px;
     color: #fff;
     font-family: Roboto;
     height: 250px;
     text-decoration: none;
-    width: 102%;
+    width: 103.5%;
   }
   footer .mini-logo {
     -webkit-filter: invert(100%);

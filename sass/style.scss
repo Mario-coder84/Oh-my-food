@@ -193,12 +193,12 @@ nav {
 
   footer {
     @include lightgray-background (#424141f4) ;
-    @include container-margin (23px, -18px);
+    @include container-margin (23px, -37px);
     color: $whitecolor; 
     font-family: $font-text;
     height: 250px;
     text-decoration: none;
-    width: 102%;
+    width: 103.5%;
        
          & .mini-logo{
           filter: invert(100%);
