@@ -25,7 +25,7 @@ nav {
       margin-bottom:2px;
 
       & .logo{
-        @include container-margin(30px, 64px);
+        @include container-margin(0, 98px);
         @include logo-size (194px, 51px);
       }
     }
